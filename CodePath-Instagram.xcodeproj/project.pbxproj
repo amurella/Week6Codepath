@@ -16,6 +16,7 @@
 		870FEA801C8BD4FC0016E197 /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870FEA7F1C8BD4FC0016E197 /* CaptureViewController.swift */; };
 		870FEA821C8BD50C0016E197 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870FEA811C8BD50C0016E197 /* HomeViewController.swift */; };
 		AFE81B87B81743A589D4861A /* Pods_CodePath_Instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D215DCE14BBFAC2DC2624FA8 /* Pods_CodePath_Instagram.framework */; };
+		CD2EB5E01C8D234F002EDBDE /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2EB5DF1C8D234F002EDBDE /* HomeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		870FEA7D1C8BD4F10016E197 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		870FEA7F1C8BD4FC0016E197 /* CaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
 		870FEA811C8BD50C0016E197 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CD2EB5DF1C8D234F002EDBDE /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		D215DCE14BBFAC2DC2624FA8 /* Pods_CodePath_Instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodePath_Instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -92,6 +94,7 @@
 				870FEA7D1C8BD4F10016E197 /* ProfileViewController.swift */,
 				870FEA7F1C8BD4FC0016E197 /* CaptureViewController.swift */,
 				870FEA811C8BD50C0016E197 /* HomeViewController.swift */,
+				CD2EB5DF1C8D234F002EDBDE /* HomeCell.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				870FEA7E1C8BD4F10016E197 /* ProfileViewController.swift in Sources */,
 				870FEA801C8BD4FC0016E197 /* CaptureViewController.swift in Sources */,
 				870FEA6D1C8BD04B0016E197 /* ViewController.swift in Sources */,
+				CD2EB5E01C8D234F002EDBDE /* HomeCell.swift in Sources */,
 				870FEA6B1C8BD04B0016E197 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

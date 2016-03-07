@@ -7,13 +7,48 @@
 //
 
 import UIKit
+import Parse
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
 
+    var picture: [PFObject]!
+    
+
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        
+        //tableView.estimatedRowHeight = 120
+        tableView.separatorStyle = .None
+        //tableView.rowHeight = UITableViewAutomaticDimension
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        let query = PFQuery(className: "Post")
+        query.whereKey("author", equalTo: PFUser.currentUser()!)
+        query.orderByDescending("createdAt")
+        query.limit = 20
+        
+        // fetch data asynchronously
+        query.findObjectsInBackgroundWithBlock { (posts: [PFObject]?, error: NSError?) -> Void in
+            if let posts = posts {
+                // do something with the data fetched
+                self.picture = posts
+                self.tableView.reloadData()
+                
+                print("Success")
+                
+            } else {
+                // handle error
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +56,23 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        if self.picture != nil {
+            return (self.picture?.count)!
+        } else {
+            return 0
+        }
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("HomeCell", forIndexPath: indexPath) as! HomeCell
+        
+        cell.picture = picture[indexPath.row]
+        
+        return cell
+    }
+    
     /*
     // MARK: - Navigation
 
